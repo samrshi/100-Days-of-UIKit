@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
     let path = Bundle.main.resourcePath!
     let items = try! fm.contentsOfDirectory(atPath: path)
     
-    for item in items {
+    for item in items.sorted() {
       print(item)
       if item.hasPrefix("nssl") {
         // this is a picture to load!
@@ -42,6 +42,7 @@ class ViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
       vc.selectedImage = pictures[indexPath.row]
+      vc.title = "Picture \(indexPath.row) of \(pictures.count)"
       navigationController?.pushViewController(vc, animated: true)
     }
   }

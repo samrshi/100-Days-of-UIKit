@@ -16,6 +16,7 @@ class ViewController: UIViewController {
   var countries = [String]()
   var score = 0
   var correctAnswer = 0
+  var questionsAsked = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
     button1.layer.borderColor = UIColor.lightGray.cgColor
     button2.layer.borderColor = UIColor.lightGray.cgColor
     button3.layer.borderColor = UIColor.lightGray.cgColor
-    
+      
     askQuestion()
   }
 
@@ -45,13 +46,15 @@ class ViewController: UIViewController {
     button2.setImage(UIImage(named: countries[1]), for: .normal)
     button3.setImage(UIImage(named: countries[2]), for: .normal)
     
-    title = countries[correctAnswer].uppercased()
+    title = countries[correctAnswer].uppercased() + ": \(score) points"
+    questionsAsked += 1
   }
   
   @IBAction func buttonTapped(_ sender: UIButton) {
     var title: String
+    let correct = sender.tag == correctAnswer
     
-    if sender.tag == correctAnswer {
+    if correct {
       title = "Correct"
       score += 1
     } else {
@@ -59,9 +62,38 @@ class ViewController: UIViewController {
       score -= 1
     }
     
-    let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
-    ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+    let countryGuessed = formattedNames[countries[sender.tag]]!
+    
+    var message: String
+    if questionsAsked == 2 {
+      message = "Game Over!\nYour final score was \(score)"
+      score = 0
+      questionsAsked = 0
+    } else {
+      message = correct ? "Good Job!" :
+        "Wrong, that was the flag of \(countryGuessed)"
+      
+      message += "\nYour score is now \(score)."
+    }
+    
+    let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
+    ac.addAction(action)
     present(ac, animated: true)
   }
 }
 
+let formattedNames: [String: String] = [
+  "estonia": "Estonia",
+  "france": "France",
+  "germany": "Germany",
+  "ireland": "Ireland",
+  "italy": "Italy",
+  "monaco": "Monaco",
+  "nigeria": "Nigeria",
+  "poland": "Poland",
+  "russia": "Russia",
+  "spain": "Spain",
+  "uk": "the U.K.",
+  "us": "the U.S.A."
+]

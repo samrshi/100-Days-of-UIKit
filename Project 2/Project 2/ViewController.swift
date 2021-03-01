@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     button1.layer.borderColor = UIColor.lightGray.cgColor
     button2.layer.borderColor = UIColor.lightGray.cgColor
     button3.layer.borderColor = UIColor.lightGray.cgColor
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "See Score", style: .plain, target: self, action: #selector(scoreTapped))
       
     askQuestion()
   }
@@ -78,6 +80,13 @@ class ViewController: UIViewController {
     
     let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
+    ac.addAction(action)
+    present(ac, animated: true)
+  }
+  
+  @objc func scoreTapped() {
+    let ac = UIAlertController(title: "Good job so far!", message: "Your current score is \(score)", preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
     ac.addAction(action)
     present(ac, animated: true)
   }

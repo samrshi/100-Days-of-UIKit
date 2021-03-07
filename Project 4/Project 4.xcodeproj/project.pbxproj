@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		BD18A41025F348FC001A93FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A40F25F348FC001A93FF /* AppDelegate.swift */; };
 		BD18A41225F348FC001A93FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A41125F348FC001A93FF /* SceneDelegate.swift */; };
-		BD18A41425F348FC001A93FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A41325F348FC001A93FF /* ViewController.swift */; };
+		BD18A41425F348FC001A93FF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A41325F348FC001A93FF /* WebViewController.swift */; };
 		BD18A41725F348FC001A93FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD18A41525F348FC001A93FF /* Main.storyboard */; };
 		BD18A41925F348FF001A93FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18A41825F348FF001A93FF /* Assets.xcassets */; };
 		BD18A41C25F348FF001A93FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD18A41A25F348FF001A93FF /* LaunchScreen.storyboard */; };
+		BD74591425F44FA000C352A4 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD74591325F44FA000C352A4 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD18A40C25F348FC001A93FF /* Project 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD18A40F25F348FC001A93FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD18A41125F348FC001A93FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD18A41325F348FC001A93FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD18A41325F348FC001A93FF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		BD18A41625F348FC001A93FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD18A41825F348FF001A93FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD18A41B25F348FF001A93FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD18A41D25F348FF001A93FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD74591325F44FA000C352A4 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				BD18A40F25F348FC001A93FF /* AppDelegate.swift */,
 				BD18A41125F348FC001A93FF /* SceneDelegate.swift */,
-				BD18A41325F348FC001A93FF /* ViewController.swift */,
 				BD18A41525F348FC001A93FF /* Main.storyboard */,
+				BD74591325F44FA000C352A4 /* MainTableViewController.swift */,
+				BD18A41325F348FC001A93FF /* WebViewController.swift */,
 				BD18A41825F348FF001A93FF /* Assets.xcassets */,
 				BD18A41A25F348FF001A93FF /* LaunchScreen.storyboard */,
 				BD18A41D25F348FF001A93FF /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD18A41425F348FC001A93FF /* ViewController.swift in Sources */,
+				BD74591425F44FA000C352A4 /* MainTableViewController.swift in Sources */,
+				BD18A41425F348FC001A93FF /* WebViewController.swift in Sources */,
 				BD18A41025F348FC001A93FF /* AppDelegate.swift in Sources */,
 				BD18A41225F348FC001A93FF /* SceneDelegate.swift in Sources */,
 			);

@@ -14,6 +14,7 @@ class MainTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Web Pages"
+    navigationController?.navigationBar.prefersLargeTitles = true
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

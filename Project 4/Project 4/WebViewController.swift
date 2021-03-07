@@ -22,6 +22,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+        
+    navigationItem.largeTitleDisplayMode = .never
     
     guard websites != nil && selectedWebsite != nil else {
       print("Websites and/or currentWebsite not set")

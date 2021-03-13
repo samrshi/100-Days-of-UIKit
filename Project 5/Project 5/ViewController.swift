@@ -16,6 +16,8 @@ class ViewController: UITableViewController {
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
     
+    navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startGame))
+    
     if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
       if let startWords = try? String(contentsOf: startWordsURL) {
         allWords = startWords.components(separatedBy: "\n")
@@ -29,7 +31,7 @@ class ViewController: UITableViewController {
     startGame()
   }
   
-  func startGame() {
+  @objc func startGame() {
     title = allWords.randomElement()
     usedWords.removeAll(keepingCapacity: true)
     tableView.reloadData()
@@ -59,35 +61,39 @@ class ViewController: UITableViewController {
   }
   
   func submit(_ answer: String) {
-    let errorTitle: String
-    let errorMessage: String
-    
     let lowerAnswer = answer.lowercased()
-    if isPossible(word: lowerAnswer) {
-      if isOriginal(word: lowerAnswer) {
-        if isReal(word: lowerAnswer) {
-          usedWords.insert(answer, at: 0)
-          
-          let indexPath = IndexPath(row: 0, section: 0)
-          tableView.insertRows(at: [indexPath], with: .automatic)
-          return
+    if longEnough(word: lowerAnswer) {
+      if isPossible(word: lowerAnswer) {
+        if isOriginal(word: lowerAnswer) {
+          if isReal(word: lowerAnswer) {
+            usedWords.insert(lowerAnswer, at: 0)
+            
+            let indexPath = IndexPath(row: 0, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            return
+          } else {
+            showErrorMessage(title: "Word not recognized", message: "You can't just make them up, you know!")
+          }
         } else {
-          errorTitle = "Word not recognised"
-          errorMessage = "You can't just make them up, you know!"
+          showErrorMessage(title: "Word used already", message: "Be more original!")
         }
       } else {
-        errorTitle = "Word used already"
-        errorMessage = "Be more original!"
+        guard let title = title?.lowercased() else { return }
+        showErrorMessage(title: "Word not possible", message: "You can't spell that word from \(title)")
       }
     } else {
-      guard let title = title?.lowercased() else { return }
-      errorTitle = "Word not possible"
-      errorMessage = "You can't spell that word from \(title)"
+      showErrorMessage(title: "Word is too short", message: "Choose a word with more than two letters!")
     }
-    
-    let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+  }
+  
+  func showErrorMessage(title: String, message: String) {
+    let ac = UIAlertController(title: title, message:  message, preferredStyle: .alert)
     ac.addAction(UIAlertAction(title: "OK", style: .default))
     present(ac, animated: true)
+  }
+  
+  func longEnough(word: String) -> Bool {
+    return word.count >= 3
   }
   
   func isPossible(word: String) -> Bool {

@@ -13,4 +13,4 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 3](https://github.com/samrshi/100-Days-of-UIKit/tree/main/Project%203) - StormViewer+UIActivityViewController|![Imgur](https://i.imgur.com/XX0NRgxm.png)   ![Imgur](https://i.imgur.com/QXlgWZ0m.png) |
 |[Project 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/Project%204) - Easy Browser|![Imgur](https://i.imgur.com/dT2fRQQm.png)   ![Imgur](https://i.imgur.com/Y5UHptSm.png) |
 |[Project 5](https://github.com/samrshi/100-Days-of-UIKit/tree/main/Project%205) - Word Scramble|![Imgur](https://i.imgur.com/PuWG2jOm.png)   ![Imgur](https://i.imgur.com/nJ5uTgRm.png)|
-|[Project 5](https://github.com/samrshi/100-Days-of-UIKit/tree/main/Project%206) - Auto Layout | |![Imgur](https://i.imgur.com/sIfD9SMm.png)|
+|[Project 5](https://github.com/samrshi/100-Days-of-UIKit/tree/main/Project%206) - Auto Layout |![Imgur](https://i.imgur.com/sIfD9SMm.png)|

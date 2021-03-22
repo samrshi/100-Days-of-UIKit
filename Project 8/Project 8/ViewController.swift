@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
   }
   var level = 1
+  var wordsMatched = 0
   
   override func loadView() {
     view = UIView()
@@ -73,6 +74,9 @@ class ViewController: UIViewController {
     
     let buttonsView = UIView()
     buttonsView.translatesAutoresizingMaskIntoConstraints = false
+    // challenge 1
+    buttonsView.layer.borderColor = UIColor.gray.cgColor
+    buttonsView.layer.borderWidth = 1
     view.addSubview(buttonsView)
     
     NSLayoutConstraint.activate([
@@ -125,6 +129,10 @@ class ViewController: UIViewController {
     }
   }
   
+  @objc func nextAction(_ sender: UIButton) {
+    levelUp(action: .init())
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -151,17 +159,31 @@ class ViewController: UIViewController {
       
       currentAnswer.text = ""
       score += 1
+      // challenge 3
+      wordsMatched += 1
       
-      if score % 7 == 0 {
+      if wordsMatched % 7 == 0 {
         let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
         present(ac, animated: true)
       }
+    } else {
+      // challenge 2
+      let ac = UIAlertController(title: "Not quite!", message: "Your answer does not match a word in the list", preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "OK", style: .default))
+      present(ac, animated: true)
+      score -= 1
     }
   }
   
   func levelUp(action: UIAlertAction) {
     level += 1
+    if level == 3 {
+      level = 1
+      let ac = UIAlertController(title: "That's it!", message: "Those are all of the levels there are", preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "Keep Playing", style: .default))
+      present(ac, animated: true)
+    }
     solutions.removeAll(keepingCapacity: true)
     loadLevel()
     

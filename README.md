@@ -16,5 +16,5 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 5](https://github.com/samrshi/100-Days-of-UIKit/tree/main/06%20-%20Word%20Scramble) - Word Scramble|![Imgur](https://i.imgur.com/PuWG2jOm.png)   ![Imgur](https://i.imgur.com/nJ5uTgRm.png)|
 |[Project 6](https://github.com/samrshi/100-Days-of-UIKit/tree/main/07%20-%20Auto%20Layout) - Auto Layout |![Imgur](https://i.imgur.com/sIfD9SMm.png)|
 |[Milestone 2](https://github.com/samrshi/100-Days-of-UIKit/tree/main/08%20-%20Milestone%202) - Shopping List |![Imgur](https://i.imgur.com/ieK6atBm.png)   ![Imgur](https://i.imgur.com/XXXlbzhm.png)|
-|[Project 7](https://github.com/samrshi/100-Days-of-UIKit/tree/main/08%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|
-|[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/09%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|
+|[Project 7](https://github.com/samrshi/100-Days-of-UIKit/tree/main/09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|
+|[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/10%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|

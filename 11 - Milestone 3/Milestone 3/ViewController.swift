@@ -7,14 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
   var allWords = [String]()
   var usedLetters = [String]()
   var incorrectGuesses: Int = 0 {
     didSet {
       DispatchQueue.main.async { [weak self] in
         guard let self = self else { return }
-        self.triesLabel.text = "Incorrect Guesses: \(self.incorrectGuesses)"
         self.image.image = UIImage(named: "hangman\(self.incorrectGuesses)")
       }
     }
@@ -27,11 +26,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
   }
   
   var promptLabel: UILabel!
-  var triesLabel: UILabel!
   var textField: UITextField!
   var nextButton: UIButton!
   var wordLabel: UILabel!
   var image: UIImageView!
+  
+  var letterButtons = [UIButton]()
+  var lettersRowOne: UIView!
+  var lettersRowTwo: UIView!
+  var lettersRowThree: UIView!
+  var lettersRowFour: UIView!
+  
+  let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   
   override func loadView() {
     view = UIView()
@@ -44,42 +50,59 @@ class ViewController: UIViewController, UITextFieldDelegate {
     promptLabel.textColor = .white
     view.addSubview(promptLabel)
     
-    triesLabel = UILabel()
-    triesLabel.translatesAutoresizingMaskIntoConstraints = false
-    triesLabel.text = "Incorrect Guesses: 0"
-    triesLabel.textColor = .white
-    view.addSubview(triesLabel)
-    
     image = UIImageView()
     image.translatesAutoresizingMaskIntoConstraints = false
     image.image = UIImage(named: "hangman0")
     image.contentMode = .scaleAspectFit
     view.addSubview(image)
     
-    textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = "Enter Guess"
-    textField.textColor = .white
-    textField.borderStyle = UITextField.BorderStyle.roundedRect
-    textField.returnKeyType = .done
-    textField.autocapitalizationType = .none
-    textField.delegate = self
-    textField.becomeFirstResponder()
-    view.addSubview(textField)
+    lettersRowOne = UIView()
+    lettersRowOne.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(lettersRowOne)
+
+    lettersRowTwo = UIView()
+    lettersRowTwo.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(lettersRowTwo)
+
+    lettersRowThree = UIView()
+    lettersRowThree.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(lettersRowThree)
+
+    lettersRowFour = UIView()
+    lettersRowFour.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(lettersRowFour)
+    
+    let rowHeight: CGFloat = 0.5*0.22
     
     NSLayoutConstraint.activate([
-      triesLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-      triesLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-      image.topAnchor.constraint(equalTo: triesLabel.bottomAnchor, constant: 50),
+      image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
       image.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
       image.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
       image.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
       image.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.3),
-      promptLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 15),
+      
+      promptLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 40),
       promptLabel.centerXAnchor.constraint(equalTo: image.centerXAnchor),
-      textField.topAnchor.constraint(equalTo: promptLabel.bottomAnchor, constant: 15),
-      textField.centerXAnchor.constraint(equalTo: promptLabel.centerXAnchor),
-      textField.widthAnchor.constraint(equalTo: image.widthAnchor)
+
+//      lettersRowOne.topAnchor.constraint(equalTo: promptLabel.bottomAnchor, constant: 25),
+      lettersRowOne.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+      lettersRowOne.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
+
+      lettersRowTwo.topAnchor.constraint(equalTo: lettersRowOne.bottomAnchor),
+      lettersRowTwo.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+      lettersRowTwo.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
+
+      lettersRowThree.topAnchor.constraint(equalTo: lettersRowTwo.bottomAnchor),
+      lettersRowThree.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+      lettersRowThree.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
+
+      lettersRowFour.topAnchor.constraint(equalTo: lettersRowThree.bottomAnchor),
+      lettersRowFour.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+      lettersRowFour.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
+      lettersRowFour.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+//      textField.topAnchor.constraint(equalTo: promptLabel.bottomAnchor, constant: 20),
+//      textField.centerXAnchor.constraint(equalTo: promptLabel.centerXAnchor),
+//      textField.widthAnchor.constraint(equalTo: image.widthAnchor, multiplier: 0.9)
     ])
   }
   
@@ -87,6 +110,61 @@ class ViewController: UIViewController, UITextFieldDelegate {
     super.viewDidLoad()
     overrideUserInterfaceStyle = .dark
     performSelector(inBackground: #selector(parseWords), with: nil)
+    
+    navigationController?.navigationBar.prefersLargeTitles = true
+    title = "Hangman"
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
+    
+    addButtonsRow(startingPosition: 0, maxCol: 6, view: lettersRowOne)
+    addButtonsRow(startingPosition: 6, maxCol: 7, view: lettersRowTwo)
+    addButtonsRow(startingPosition: 13, maxCol: 6, view: lettersRowThree)
+    addButtonsRow(startingPosition: 19, maxCol: 7, view: lettersRowFour)
+  }
+  
+  func addButtonsRow(startingPosition: Int, maxCol: Int, view: UIView) {
+    for col in 0..<maxCol {
+      let button = UIButton(type: .system)
+      button.titleLabel?.font = .monospacedSystemFont(ofSize: 30, weight: .regular)
+      button.setTitleColor(.white, for: .normal)
+      button.setTitle(letters[startingPosition + col], for: .normal)
+      button.contentHorizontalAlignment = .center
+      button.contentVerticalAlignment = .center
+      button.translatesAutoresizingMaskIntoConstraints = false
+      button.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
+      
+      view.addSubview(button)
+      
+      button.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+      button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/CGFloat(maxCol)).isActive = true
+      
+      switch col {
+      // leftmost button
+      case 0:
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+      // rightmost button
+      case maxCol - 1:
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        fallthrough
+      // middle buttons
+      default:
+        button.leadingAnchor.constraint(greaterThanOrEqualTo: letterButtons[startingPosition + (col - 1)].trailingAnchor).isActive = true
+      }
+      
+      letterButtons.append(button)
+    }
+  }
+  
+  @objc func letterTapped(_ sender: UIButton) {
+    guard let text = sender.titleLabel?.text else { return }
+    sender.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.25), for: .normal)
+    guessLetter(guess: text.lowercased())
+  }
+  
+  @objc func showScore() {
+    let ac = UIAlertController(title: "Your Score", message: "You have guessed \(incorrectGuesses) letters incorrectly.\nYou have guessed \(currentWordIndex) words correctly.", preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .default))
+    present(ac, animated: true)
   }
   
   @objc func parseWords() {
@@ -102,33 +180,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     currentWordIndex = 0
   }
   
-  func startLevel() {
-    DispatchQueue.main.async { [weak self] in
-      guard let self = self else { return }
-      
-      if self.currentWordIndex >= self.allWords.count {
-        let ac = UIAlertController(title: "Game Over!", message: "That's all of the words we have for you.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Start Over", style: .default) { [weak self] _ in
-          guard let self = self else { return }
-          self.currentWordIndex = 0
-          self.allWords.shuffle()
-        })
-        self.present(ac, animated: true)
-        return
-      }
-      
-      self.usedLetters = []
-      self.incorrectGuesses = 0
-
-      let currentWord = self.allWords[self.currentWordIndex].lowercased()
-      var result: String = ""
-      for _ in currentWord {
-        result += "_"
-      }
-      self.promptLabel.text = result.trimmingCharacters(in: .whitespacesAndNewlines)
-      }
-  }
-  
   func guessLetter(guess: String) {
     DispatchQueue.main.async { [weak self] in
       guard let self = self, var prompt = self.promptLabel.text else { return }
@@ -142,7 +193,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       
       let currentWord = self.allWords[self.currentWordIndex].lowercased()
       self.usedLetters.append(guess)
-
+      
       if currentWord.contains(guess) {
         for (index, char) in currentWord.enumerated() {
           if String(char) == guess {
@@ -173,21 +224,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
   }
   
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    if let text = textField.text {
-      if text.count != 0 {
-        guessLetter(guess: text.lowercased())
+  func startLevel() {
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else { return }
+      
+      if self.currentWordIndex >= self.allWords.count {
+        let ac = UIAlertController(title: "Game Over!", message: "That's all of the words we have for you.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Start Over", style: .default) { [weak self] _ in
+          guard let self = self else { return }
+          self.currentWordIndex = 0
+          self.allWords.shuffle()
+        })
+        self.present(ac, animated: true)
+        return
+      }
+      
+      self.usedLetters = []
+      self.incorrectGuesses = 0
+      
+      let currentWord = self.allWords[self.currentWordIndex].lowercased()
+      var result: String = ""
+      for _ in currentWord {
+        result += "_"
+      }
+      self.promptLabel.text = result.trimmingCharacters(in: .whitespacesAndNewlines)
+      
+      for button in self.letterButtons {
+        button.setTitleColor(.white, for: .normal)
       }
     }
-    textField.text = ""
-    return true
-  }
-  
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    if ((textField.text?.count)! + (string.count - range.length)) > 1 {
-      return false
-    }
-    return true
   }
 }
 

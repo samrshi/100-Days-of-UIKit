@@ -20,3 +20,4 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/10%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|
 |[Project 9](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Whitehouse Petitions+GCD |![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|
 |[Milestone 3](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Hangman |![Imgur](https://i.imgur.com/zmFemXfm.png)   ![Imgur](https://i.imgur.com/1xrhG5Dm.png)|
+|[Project 10](https://github.com/samrshi/100-Days-of-UIKit/tree/main/13%20-%20Names%20to%20Faces) - Faces to Names |![Imgur](https://i.imgur.com/rRWcMpVm.png)   ![Imgur](https://i.imgur.com/VaHvK7am.png)|

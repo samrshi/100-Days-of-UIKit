@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     }
   }
   
+  var wordsGuessedCorrectly: Int = 0
+  
   var promptLabel: UILabel!
   var textField: UITextField!
   var nextButton: UIButton!
@@ -84,7 +86,6 @@ class ViewController: UIViewController {
       promptLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 40),
       promptLabel.centerXAnchor.constraint(equalTo: image.centerXAnchor),
 
-//      lettersRowOne.topAnchor.constraint(equalTo: promptLabel.bottomAnchor, constant: 25),
       lettersRowOne.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
       lettersRowOne.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
 
@@ -100,9 +101,6 @@ class ViewController: UIViewController {
       lettersRowFour.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
       lettersRowFour.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: rowHeight),
       lettersRowFour.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-//      textField.topAnchor.constraint(equalTo: promptLabel.bottomAnchor, constant: 20),
-//      textField.centerXAnchor.constraint(equalTo: promptLabel.centerXAnchor),
-//      textField.widthAnchor.constraint(equalTo: image.widthAnchor, multiplier: 0.9)
     ])
   }
   
@@ -162,7 +160,7 @@ class ViewController: UIViewController {
   }
   
   @objc func showScore() {
-    let ac = UIAlertController(title: "Your Score", message: "You have guessed \(incorrectGuesses) letters incorrectly.\nYou have guessed \(currentWordIndex) words correctly.", preferredStyle: .alert)
+    let ac = UIAlertController(title: "Your Score", message: "You have guessed \(incorrectGuesses) letters incorrectly.\nYou have guessed \(wordsGuessedCorrectly) words correctly.", preferredStyle: .alert)
     ac.addAction(UIAlertAction(title: "OK", style: .default))
     present(ac, animated: true)
   }
@@ -178,6 +176,7 @@ class ViewController: UIViewController {
       string == ""
     }
     currentWordIndex = 0
+    wordsGuessedCorrectly = 0
   }
   
   func guessLetter(guess: String) {
@@ -207,6 +206,7 @@ class ViewController: UIViewController {
           let ac = UIAlertController(title: "Congratulations!", message: "You completed the level!", preferredStyle: .alert)
           ac.addAction(UIAlertAction(title: "Next Level", style: .default) { _ in
             self.currentWordIndex += 1
+            self.wordsGuessedCorrectly += 1
           })
           self.present(ac, animated: true)
         }

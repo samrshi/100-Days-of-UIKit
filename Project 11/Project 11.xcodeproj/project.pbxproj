@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDC3191C261830A4009E11FC /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDC3191B261830A3009E11FC /* FireParticles.sks */; };
+		BDC31923261834AF009E11FC /* ImagesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC31922261834AF009E11FC /* ImagesDictionary.swift */; };
 		BDFC686326142ED000949C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC686226142ED000949C31 /* AppDelegate.swift */; };
 		BDFC686526142ED000949C31 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDFC686426142ED000949C31 /* GameScene.sks */; };
 		BDFC686926142ED000949C31 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC686826142ED000949C31 /* GameScene.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDC3191B261830A3009E11FC /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = FireParticles.sks; path = "project11-files/Content/FireParticles.sks"; sourceTree = SOURCE_ROOT; };
+		BDC31922261834AF009E11FC /* ImagesDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDictionary.swift; sourceTree = "<group>"; };
 		BDFC685F26142ED000949C31 /* Project 11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFC686226142ED000949C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFC686426142ED000949C31 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -61,9 +65,11 @@
 				BDFC686226142ED000949C31 /* AppDelegate.swift */,
 				BDFC686426142ED000949C31 /* GameScene.sks */,
 				BDFC686826142ED000949C31 /* GameScene.swift */,
+				BDC31922261834AF009E11FC /* ImagesDictionary.swift */,
 				BDFC686A26142ED000949C31 /* GameViewController.swift */,
 				BDFC686C26142ED000949C31 /* Main.storyboard */,
 				BDFC687C2614338200949C31 /* Launch.storyboard */,
+				BDC3191B261830A3009E11FC /* FireParticles.sks */,
 				BDFC686F26142ED200949C31 /* Assets.xcassets */,
 				BDFC687126142ED200949C31 /* Info.plist */,
 			);
@@ -129,6 +135,7 @@
 			files = (
 				BDFC686E26142ED000949C31 /* Main.storyboard in Resources */,
 				BDFC686526142ED000949C31 /* GameScene.sks in Resources */,
+				BDC3191C261830A4009E11FC /* FireParticles.sks in Resources */,
 				BDFC687026142ED200949C31 /* Assets.xcassets in Resources */,
 				BDFC687D2614338200949C31 /* Launch.storyboard in Resources */,
 			);
@@ -144,6 +151,7 @@
 				BDFC686926142ED000949C31 /* GameScene.swift in Sources */,
 				BDFC686B26142ED000949C31 /* GameViewController.swift in Sources */,
 				BDFC686326142ED000949C31 /* AppDelegate.swift in Sources */,
+				BDC31923261834AF009E11FC /* ImagesDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

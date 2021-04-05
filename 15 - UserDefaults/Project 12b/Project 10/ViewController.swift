@@ -18,6 +18,16 @@ class ViewController: UICollectionViewController {
       target: self,
       action: #selector(addNewPerson)
     )
+    
+    let defaults = UserDefaults.standard
+    if let savedPeople = defaults.object(forKey: "people") as? Data {
+      let decoder = JSONDecoder()
+      do {
+        people = try decoder.decode([Person].self, from: savedPeople)
+      } catch {
+        print("Failed to load people.")
+      }
+    }
   }
   
   func showNameAlert(person: Person) {
@@ -32,6 +42,7 @@ class ViewController: UICollectionViewController {
       guard let self = self, let ac = ac else { return }
       guard let text = ac.textFields?[0].text else { return }
       person.name = text
+      self.save()
       self.collectionView.reloadData()
     }
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -139,6 +150,7 @@ extension ViewController {
       title: "Delete this person",
       style: .destructive) { [weak self] _ in
         self?.people.remove(at: indexPath.item)
+        self?.save()
         self?.collectionView.reloadData()
     }
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -167,10 +179,22 @@ extension ViewController: UIImagePickerControllerDelegate,  UINavigationControll
     
     let person = Person(name: "unknown", image: imageName)
     people.append(person)
+    self.save()
     collectionView.reloadData()
     
     dismiss(animated: true)
     
     showNameAlert(person: person)
+  }
+  
+  func save() {
+    let jsonEncoder = JSONEncoder()
+    
+    if let savedData = try? jsonEncoder.encode(people) {
+      let defaults = UserDefaults.standard
+      defaults.set(savedData, forKey: "people")
+    } else {
+      print("Failed to save.")
+    }
   }
 }

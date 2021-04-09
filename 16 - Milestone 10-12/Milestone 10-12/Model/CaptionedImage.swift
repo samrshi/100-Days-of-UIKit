@@ -8,10 +8,10 @@
 import Foundation
 
 class CaptionedImage: Codable {
-  let imageFilename: URL
+  let imageFilename: String
   var caption: String
   
-  init(imageFilename: URL, caption: String) {
+  init(imageFilename: String, caption: String) {
     self.imageFilename = imageFilename
     self.caption = caption
   }

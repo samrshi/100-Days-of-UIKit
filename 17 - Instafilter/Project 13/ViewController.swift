@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var intensity: UISlider!
+  @IBOutlet var radius: UISlider! // challenge 3
+  @IBOutlet var changeFilter: UIButton!   // challenge 2
+
+  
   var currentImage: UIImage!
   
   var context: CIContext!
@@ -29,6 +33,7 @@ class ViewController: UIViewController {
     
     context = CIContext()
     currentFilter = CIFilter(name: "CISepiaTone")
+    changeFilter.setTitle("CISepiaTone", for: .normal)
   }
   
   @objc func importPicture() {
@@ -103,6 +108,7 @@ class ViewController: UIViewController {
     guard let actionTitle = action.title else { return }
     
     currentFilter = CIFilter(name: actionTitle)
+    changeFilter.setTitle(actionTitle, for: .normal)
     
     let beginImage = CIImage(image: currentImage)
     currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
@@ -111,7 +117,18 @@ class ViewController: UIViewController {
   }
   
   @IBAction func save(_ sender: Any) {
-    guard let image = imageView.image else { return }
+    guard let image = imageView.image else {
+      // challenge 1
+      let ac = UIAlertController(
+        title: "Save Error",
+        message: "You must select an image before saving.",
+        preferredStyle: .alert
+      )
+      ac.addAction(UIAlertAction(title: "OK", style: .default))
+      present(ac, animated: true)
+      
+      return
+    }
     
     UIImageWriteToSavedPhotosAlbum(
       image,
@@ -144,8 +161,8 @@ class ViewController: UIViewController {
     applyProcessing()
   }
   
-  @IBAction func help(_ sender: Any) {
-    print("ugh")
+  @IBAction func radiusChanged(_ sender: Any) {
+    applyProcessing()
   }
   
   func applyProcessing() {
@@ -156,7 +173,7 @@ class ViewController: UIViewController {
     }
     
     if inputKeys.contains(kCIInputRadiusKey) {
-      currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+      currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
     }
     
     if inputKeys.contains(kCIInputScaleKey) {

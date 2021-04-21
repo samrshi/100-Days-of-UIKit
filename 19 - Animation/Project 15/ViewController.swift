@@ -54,11 +54,9 @@ class ViewController: UIViewController {
         case 6:
           self.imageView.alpha = 0.1
           self.imageView.backgroundColor = .green
-          self.imageView.layer.cornerRadius = 10
         case 7:
           self.imageView.alpha = 1
           self.imageView.backgroundColor = .clear
-          self.imageView.layer.cornerRadius = 0
         default:
           break
         }

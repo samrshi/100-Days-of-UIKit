@@ -81,12 +81,12 @@ class WhackSlot: SKNode {
   
   func emitSmoke() {
     guard let smokeParticle = SKEmitterNode(fileNamed: "Smoke") else { return }
-    smokeParticle.position = position
-    
+    smokeParticle.position  = CGPoint(x: 0, y: 0)
+
     let smokeSequence = SKAction.sequence([
       SKAction.run { [weak self] in self?.addChild(smokeParticle) },
-      SKAction.wait(forDuration: 3),
-      SKAction.run { smokeParticle.removeFromParent() },
+//      SKAction.wait(forDuration: 3),
+//      SKAction.run { smokeParticle.removeFromParent() },
     ])
     
     run(smokeSequence)

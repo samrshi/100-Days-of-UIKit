@@ -49,11 +49,6 @@ class GameScene: SKScene {
     let tappedNodes = nodes(at: location)
     
     for node in tappedNodes {
-      if node.name == "newGame" {
-        reset()
-        continue
-      }
-      
       guard let whackSlot = node.parent?.parent as? WhackSlot else { continue }
       if !whackSlot.isVisible { continue }
       if whackSlot.isHit { continue }
@@ -123,24 +118,5 @@ class GameScene: SKScene {
     scoreLabel.zPosition = 2
     scoreLabel.fontSize = 40
     addChild(scoreLabel)
-    
-    let resetLabel = SKLabelNode(fontNamed: "Courier-Bold")
-    resetLabel.text = "<<NEW GAME>>"
-    resetLabel.name = "newGame"
-    resetLabel.position = CGPoint(x: 512, y: 290)
-    resetLabel.zPosition = 2
-    resetLabel.fontSize = 30
-    addChild(resetLabel)
-  }
-  
-  func reset() {
-    popupTime = 0.85
-    numRounds = 0
-    score = 0
-    
-    for slot in slots {
-      slot.isVisible = false
-      slot.isHidden = false
-    }
   }
 }

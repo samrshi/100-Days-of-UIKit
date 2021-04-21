@@ -13,6 +13,7 @@ class GameScene: SKScene {
   var gameScore: SKLabelNode!
   
   var popupTime = 0.85
+  var numRounds = 0
   
   var score: Int = 0 {
     didSet { gameScore.text = "Score: \(score)" }
@@ -43,7 +44,32 @@ class GameScene: SKScene {
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    guard let touch = touches.first else { return }
+    let location = touch.location(in: self)
+    let tappedNodes = nodes(at: location)
     
+    for node in tappedNodes {
+      if node.name == "newGame" {
+        reset()
+        continue
+      }
+      
+      guard let whackSlot = node.parent?.parent as? WhackSlot else { continue }
+      if !whackSlot.isVisible { continue }
+      if whackSlot.isHit { continue }
+      
+      whackSlot.hit()
+
+      if node.name == "charFriend" {
+        score -= 5
+        run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
+      } else if node.name == "charEnemy" {
+        whackSlot.charNode.xScale = 0.85
+        whackSlot.charNode.yScale = 0.85
+        score += 1
+        run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
+      }
+    }
   }
   
   func createSlot(at position: CGPoint) {
@@ -54,6 +80,12 @@ class GameScene: SKScene {
   }
   
   func createEnemy() {
+    numRounds += 1
+    guard numRounds < 30 else {
+      gameOver()
+      return
+    }
+    
     popupTime *= 0.991
     
     slots.shuffle()
@@ -70,6 +102,45 @@ class GameScene: SKScene {
     
     DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
       self?.createEnemy()
+    }
+  }
+  
+  func gameOver() {
+    // challenge 1
+    run(SKAction.playSoundFileNamed("gameover.mp3", waitForCompletion: false))
+    
+    for slot in slots { slot.hide() }
+    
+    let gameOver = SKSpriteNode(imageNamed: "gameOver")
+    gameOver.position = CGPoint(x: 512, y: 384)
+    gameOver.zPosition = 1
+    addChild(gameOver)
+    
+    // challenge 2
+    let scoreLabel = SKLabelNode(fontNamed: "Courier-Bold")
+    scoreLabel.text = "Score: \(score)"
+    scoreLabel.position = CGPoint(x: 512, y: 320)
+    scoreLabel.zPosition = 2
+    scoreLabel.fontSize = 40
+    addChild(scoreLabel)
+    
+    let resetLabel = SKLabelNode(fontNamed: "Courier-Bold")
+    resetLabel.text = "<<NEW GAME>>"
+    resetLabel.name = "newGame"
+    resetLabel.position = CGPoint(x: 512, y: 290)
+    resetLabel.zPosition = 2
+    resetLabel.fontSize = 30
+    addChild(resetLabel)
+  }
+  
+  func reset() {
+    popupTime = 0.85
+    numRounds = 0
+    score = 0
+    
+    for slot in slots {
+      slot.isVisible = false
+      slot.isHidden = false
     }
   }
 }

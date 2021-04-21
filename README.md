@@ -25,3 +25,4 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 12](https://github.com/samrshi/100-Days-of-UIKit/tree/main/15%20-%20UserDefaults) - UserDefaults |![Imgur](https://i.imgur.com/rRWcMpVm.png)|
 |[Milestone 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/16%20-%20Milestone%2010-12) - Image Captions |![Imgur](https://i.imgur.com/zgHJeIam.png)   ![Imgur](https://i.imgur.com/qpOHrF9m.png)|
 |[Project 13](https://github.com/samrshi/100-Days-of-UIKit/tree/main/17%20-%20Instafilter) - InstaFilter |![Imgur](https://i.imgur.com/y0goz5Im.png)   ![Imgur](https://i.imgur.com/TuM86eam.png)|
+|[Project 14](https://github.com/samrshi/100-Days-of-UIKit/tree/main/18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](https://i.imgur.com/mnMzwMym.png)</br>![Imgur](https://i.imgur.com/CeTGaONm.png)|

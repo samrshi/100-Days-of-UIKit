@@ -20,6 +20,8 @@ class GameScene: SKScene {
   }
   
   override func didMove(to view: SKView) {
+    removeAllChildren()
+
     let background = SKSpriteNode(imageNamed: "whackBackground")
     background.position = CGPoint(x: 512, y: 384)
     background.blendMode = .replace
@@ -32,6 +34,11 @@ class GameScene: SKScene {
     gameScore.horizontalAlignmentMode = .left
     gameScore.fontSize = 48
     addChild(gameScore)
+    
+    popupTime = 0.85
+    numRounds = 0
+    slots = []
+    score = 0
     
     for i in 0 ..< 5 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 410)) }
     for i in 0 ..< 4 { createSlot(at: CGPoint(x: 180 + (i * 170), y: 320)) }
@@ -49,6 +56,11 @@ class GameScene: SKScene {
     let tappedNodes = nodes(at: location)
     
     for node in tappedNodes {
+      if node.name == "resetLabel" {
+        didMove(to: view!)
+        continue
+      }
+      
       guard let whackSlot = node.parent?.parent as? WhackSlot else { continue }
       if !whackSlot.isVisible { continue }
       if whackSlot.isHit { continue }
@@ -76,6 +88,7 @@ class GameScene: SKScene {
   
   func createEnemy() {
     numRounds += 1
+    
     guard numRounds < 30 else {
       gameOver()
       return
@@ -118,5 +131,13 @@ class GameScene: SKScene {
     scoreLabel.zPosition = 2
     scoreLabel.fontSize = 40
     addChild(scoreLabel)
+    
+    let resetLabel = SKLabelNode(fontNamed: "Courier-Bold")
+    resetLabel.text = "> New Game <"
+    resetLabel.name = "resetLabel"
+    resetLabel.position = CGPoint(x: 512, y: 280)
+    resetLabel.zPosition = 2
+    resetLabel.fontSize = 30
+    addChild(resetLabel)
   }
 }

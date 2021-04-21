@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
   var imageView: UIImageView!
   var currentAnimation = 0
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     imageView = UIImageView(image: UIImage(named: "penguin"))
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
   @IBAction func tapped(_ sender: UIButton) {
     sender.isHidden = true
-    
+
 //    UIView.animate(
 //      withDuration: 1,
 //      delay: 0,
@@ -61,16 +61,15 @@ class ViewController: UIViewController {
           break
         }
       },
-      completion: { finished in
+      completion: { _ in
         sender.isHidden = false
       }
     )
-    
+
     currentAnimation += 1
-    
+
     if currentAnimation > 7 {
       currentAnimation = 0
     }
   }
 }
-

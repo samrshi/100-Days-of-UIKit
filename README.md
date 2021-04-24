@@ -9,7 +9,7 @@ https://www.hackingwithswift.com/100/swift/
 |Name|Screenshots|
 |--|--|
 |[Project 1](01%20-%20Storm%20Viewer) - StormViewer|![Imgur](01%20-%20Storm%20Viewer/Screenshots/Storm1.png)   ![Imgur](01%20-%20Storm%20Viewer/Screenshots/Storm2.png)|
-|[Project 2](https://github.com/samrshi/100-Days-of-UIKit/tree/main/02%20-%20Guess%20the%20Flag) - Guess the Flag|![Imgur](https://i.imgur.com/HZuzMzbm.png)   ![Imgur](https://i.imgur.com/lr8kB8Cm.png)|
+|[Project 2](02%20-%20Guess%20the%20Flag) - Guess the Flag|![Imgur](02%20-%20Guess%20the%20Flag/Screenshots/Flag1.png)   ![Imgur](02%20-%20Guess%20the%20Flag/Screenshots/Flag2.png)|
 |[Project 3](https://github.com/samrshi/100-Days-of-UIKit/tree/main/03%20-%20Social%20Media) - Social Media|![Imgur](https://i.imgur.com/XX0NRgxm.png)   ![Imgur](https://i.imgur.com/QXlgWZ0m.png) |
 |[Milestone 1](https://github.com/samrshi/100-Days-of-UIKit/tree/main/04%20-%20Milestone%201) - Guess the Flag 2.0|![Imgur](https://i.imgur.com/GDSkKXAm.png)   ![Imgur](https://i.imgur.com/CV7GGMzm.png) |
 |[Project 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/05%20-%20Easy%20Browser) - Easy Browser|![Imgur](https://i.imgur.com/dT2fRQQm.png)   ![Imgur](https://i.imgur.com/Y5UHptSm.png) |

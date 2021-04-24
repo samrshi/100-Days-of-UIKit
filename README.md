@@ -12,8 +12,8 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 2](02%20-%20Guess%20the%20Flag) - Guess the Flag|![Imgur](02%20-%20Guess%20the%20Flag/Screenshots/Flag1.png)   ![Imgur](02%20-%20Guess%20the%20Flag/Screenshots/Flag2.png)|
 |[Project 3](03%20-%20Social%20Media) - Social Media|![Imgur](03%20-%20Social%20Media/Screenshots/Social1.png)   ![Imgur](03%20-%20Social%20Media/Screenshots/Social2.png) |
 |[Milestone 1](04%20-%20Milestone%201) - Guess the Flag 2.0|![Imgur](04%20-%20Milestone%201/Screenshots/Milestone1.png)   ![Imgur](04%20-%20Milestone%201/Screenshots/Milestone2.png) |
-|[Project 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/05%20-%20Easy%20Browser) - Easy Browser|![Imgur](https://i.imgur.com/dT2fRQQm.png)   ![Imgur](https://i.imgur.com/Y5UHptSm.png) |
-|[Project 5](https://github.com/samrshi/100-Days-of-UIKit/tree/main/06%20-%20Word%20Scramble) - Word Scramble|![Imgur](https://i.imgur.com/PuWG2jOm.png)   ![Imgur](https://i.imgur.com/nJ5uTgRm.png)|
+|[Project 4](05%20-%20Easy%20Browser) - Easy Browser|![Imgur](05%20-%20Easy%20Browser/Screenshots/Browser1.png)   ![Imgur](05%20-%20Easy%20Browser/Screenshots/Browser2.png) |
+|[Project 5](06%20-%20Word%20Scramble) - Word Scramble|![Imgur](06%20-%20Word%20Scramble/Screenshots/Word1.png)   ![Imgur](06%20-%20Word%20Scramble/Screenshots/Word2.png)|
 |[Project 6](https://github.com/samrshi/100-Days-of-UIKit/tree/main/07%20-%20Auto%20Layout) - Auto Layout |![Imgur](https://i.imgur.com/sIfD9SMm.png)|
 |[Milestone 2](https://github.com/samrshi/100-Days-of-UIKit/tree/main/08%20-%20Milestone%202) - Shopping List |![Imgur](https://i.imgur.com/ieK6atBm.png)   ![Imgur](https://i.imgur.com/XXXlbzhm.png)|
 |[Project 7](https://github.com/samrshi/100-Days-of-UIKit/tree/main/09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|

@@ -16,7 +16,7 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 5](06%20-%20Word%20Scramble) - Word Scramble|![Imgur](06%20-%20Word%20Scramble/Screenshots/WordScramble1.png)   ![Imgur](06%20-%20Word%20Scramble/Screenshots/WordScramble2.png)|
 |[Project 6](07%20-%20Auto%20Layout) - Auto Layout |![Imgur](07%20-%20Auto%20Layout/Screenshots/Project6.png)|
 |[Milestone 2](08%20-%20Milestone%202) - Shopping List |![Imgur](08%20-%20Milestone%202/Screenshots/Milestone2_1.png)   ![Imgur](08%20-%20Milestone%202/Screenshots/Milestone2_2.png)|
-|[Project 7](09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse-1.png)   ![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse-2.png)|
+|[Project 7](09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse1.png)   ![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse2.png)|
 
 |[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/10%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|
 

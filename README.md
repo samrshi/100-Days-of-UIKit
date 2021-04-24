@@ -15,7 +15,7 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 4](05%20-%20Easy%20Browser) - Easy Browser|![Imgur](05%20-%20Easy%20Browser/Screenshots/Browser1.png)   ![Imgur](05%20-%20Easy%20Browser/Screenshots/Browser2.png) |
 |[Project 5](06%20-%20Word%20Scramble) - Word Scramble|![Imgur](06%20-%20Word%20Scramble/Screenshots/Word1.png)   ![Imgur](06%20-%20Word%20Scramble/Screenshots/Word2.png)|
 |[Project 6](07%20-%20Auto%20Layout) - Auto Layout |![Imgur](07%20-%20Auto%20Layout/Screenshots/Project6.png)|
-|[Milestone 2](https://github.com/samrshi/100-Days-of-UIKit/tree/main/08%20-%20Milestone%202) - Shopping List |![Imgur](https://i.imgur.com/ieK6atBm.png)   ![Imgur](https://i.imgur.com/XXXlbzhm.png)|
+|[Milestone 2](08%20-%20Milestone%202) - Shopping List |![Imgur](08%20-%20Milestone%202/Screenshots/Milestone1.png)   ![Imgur](08%20-%20Milestone%202/Screenshots/Milestone2.png)|
 |[Project 7](https://github.com/samrshi/100-Days-of-UIKit/tree/main/09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|
 |[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/10%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|
 |[Project 9](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Whitehouse Petitions+GCD |![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|

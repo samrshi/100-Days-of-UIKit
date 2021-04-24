@@ -22,13 +22,8 @@ https://www.hackingwithswift.com/100/swift/
 |[Milestone 3](12%20-%20Milestone%203) - Hangman |![Imgur](12%20-%20Milestone%203/Screenshots/Hangman%201.png)   ![Imgur](12%20-%20Milestone%203/Screenshots/Hangman%201.png)|
 |[Project 10](13%20-%20Names%20to%20Faces) - Faces to Names |![Imgur](13%20-%20Names%20to%20Faces/Screenshots/Project%2010-1.png)   ![Imgur](13%20-%20Names%20to%20Faces/Screenshots/Project%2010-2.png)|
 |[Project 11](14%20-%20Pachinko) - Pachinko |![Imgur](14%20-%20Pachinko/Screenshots/pachinko.jpeg)|
-
-|[Project 12](https://github.com/samrshi/100-Days-of-UIKit/tree/main/15%20-%20UserDefaults) - UserDefaults |![Imgur](https://i.imgur.com/rRWcMpVm.png)|
-
-|[Milestone 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/16%20-%20Milestone%2010-12) - Image Captions |![Imgur](https://i.imgur.com/zgHJeIam.png)   ![Imgur](https://i.imgur.com/qpOHrF9m.png)|
-
-|[Project 13](https://github.com/samrshi/100-Days-of-UIKit/tree/main/17%20-%20Instafilter) - InstaFilter |![Imgur](https://i.imgur.com/y0goz5Im.png)   ![Imgur](https://i.imgur.com/TuM86eam.png)|
-
-|[Project 14](https://github.com/samrshi/100-Days-of-UIKit/tree/main/18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](https://i.imgur.com/mnMzwMym.png)</br>![Imgur](https://i.imgur.com/CeTGaONm.png)|
-
-|[Project 15](https://github.com/samrshi/100-Days-of-UIKit/tree/main/19%20-%20Animation) - Animations |![GIF](19%20-%20Animation/Screenshots/Animations.gif)|
+|[Project 12](15%20-%20UserDefaults) - UserDefaults |![Imgur](15%20-%20UserDefaults/Screenshots/Project12.png)|
+|[Milestone 4](16%20-%20Milestone%2010-12) - Image Captions |![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone1.PNG)   ![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone2.PNG)|
+|[Project 13](17%20-%20Instafilter) - InstaFilter |![Imgur](17%20-%20Instafilter/Screenshots/InstaFilter1.png)   ![Imgur](17%20-%20Instafilter/Screenshots/InstaFilter1.png)|
+|[Project 14](18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/WhackAPenguin1.PNG)</br>![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/WhackAPenguin2.PNG)|
+|[Project 15](19%20-%20Animation) - Animations |![GIF](19%20-%20Animation/Screenshots/Animations.gif)|

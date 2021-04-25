@@ -19,10 +19,11 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 7](09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse1.png)   ![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse2.png)|
 |[Project 8](10%20-%20Swifty%20Words) - Swifty Words|![Imgur](10%20-%20Swifty%20Words/Screenshots/SwiftyWords.png)|
 |[Project 9](11%20-%20Whitehouse%2BGCD) - Whitehouse Petitions+GCD |![Imgur](11%20-%20Whitehouse%2BGCD/Screenshots/Whitehouse1.png)   ![Imgur](11%20-%20Whitehouse%2BGCD/Screenshots/Whitehouse2.png)|
-|[Milestone 3](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Hangman |![Imgur](https://i.imgur.com/zmFemXfm.png)   ![Imgur](https://i.imgur.com/1xrhG5Dm.png)|
-|[Project 10](https://github.com/samrshi/100-Days-of-UIKit/tree/main/13%20-%20Names%20to%20Faces) - Faces to Names |![Imgur](https://i.imgur.com/rRWcMpVm.png)   ![Imgur](https://i.imgur.com/VaHvK7am.png)|
-|[Project 11](https://github.com/samrshi/100-Days-of-UIKit/tree/main/14%20-%20Pachinko) - Pachinko |![Imgur](https://i.imgur.com/vDtHQWAm.jpg)|
-|[Project 12](https://github.com/samrshi/100-Days-of-UIKit/tree/main/15%20-%20UserDefaults) - UserDefaults |![Imgur](https://i.imgur.com/rRWcMpVm.png)|
+|[Milestone 3](12%20-%20Milestone%203) - Hangman |![Imgur](12%20-%20Milestone%203/Screenshots/Hangman1.png)   ![Imgur](12%20-%20Milestone%203/Screenshots/Hangman2.png)|
+|[Project 10](13%20-%20Names%20to%20Faces) - Faces to Names |![Imgur](13%20-%20Names%20to%20Faces/Screenshots/Names1.png)   ![Imgur](13%20-%20Names%20to%20Faces/Screenshots/Names2.png)|
+|[Project 11](14%20-%20Pachinko) - Pachinko |![Imgur](14%20-%20Pachinko/Screenshots/Pachinko.png)|
+|[Project 12](15%20-%20UserDefaults) - UserDefaults |![Imgur](15%20-%20UserDefaults/Screenshots/Names.png)|
+
 |[Milestone 4](https://github.com/samrshi/100-Days-of-UIKit/tree/main/16%20-%20Milestone%2010-12) - Image Captions |![Imgur](https://i.imgur.com/zgHJeIam.png)   ![Imgur](https://i.imgur.com/qpOHrF9m.png)|
 |[Project 13](https://github.com/samrshi/100-Days-of-UIKit/tree/main/17%20-%20Instafilter) - InstaFilter |![Imgur](https://i.imgur.com/y0goz5Im.png)   ![Imgur](https://i.imgur.com/TuM86eam.png)|
 |[Project 14](https://github.com/samrshi/100-Days-of-UIKit/tree/main/18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](https://i.imgur.com/mnMzwMym.png)</br>![Imgur](https://i.imgur.com/CeTGaONm.png)|

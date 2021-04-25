@@ -17,7 +17,7 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 6](07%20-%20Auto%20Layout) - Auto Layout |![Imgur](07%20-%20Auto%20Layout/Screenshots/Project6.png)|
 |[Milestone 2](08%20-%20Milestone%202) - Shopping List |![Imgur](08%20-%20Milestone%202/Screenshots/Milestone1.png)   ![Imgur](08%20-%20Milestone%202/Screenshots/Milestone2.png)|
 |[Project 7](09%20-%20Whitehouse%20Petitions) - Whitehouse Petitions|![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse1.png)   ![Imgur](09%20-%20Whitehouse%20Petitions/Screenshots/Whitehouse1.png)|
-|[Project 8](https://github.com/samrshi/100-Days-of-UIKit/tree/main/10%20-%20Swifty%20Words) - Swifty Words|![Imgur](https://i.imgur.com/9GZZZzjm.png)|
+|[Project 8](10%20-%20Swifty%20Words) - Swifty Words|![Imgur](10%20-%20Swifty%20Words/Screenshots/SwiftWords.png)|
 |[Project 9](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Whitehouse Petitions+GCD |![Imgur](https://i.imgur.com/J4ELxDzm.png)   ![Imgur](https://i.imgur.com/wWMTakAm.png)|
 |[Milestone 3](https://github.com/samrshi/100-Days-of-UIKit/tree/main/11%20-%20Whitehouse%2BGCD) - Hangman |![Imgur](https://i.imgur.com/zmFemXfm.png)   ![Imgur](https://i.imgur.com/1xrhG5Dm.png)|
 |[Project 10](https://github.com/samrshi/100-Days-of-UIKit/tree/main/13%20-%20Names%20to%20Faces) - Faces to Names |![Imgur](https://i.imgur.com/rRWcMpVm.png)   ![Imgur](https://i.imgur.com/VaHvK7am.png)|

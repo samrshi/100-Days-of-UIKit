@@ -26,4 +26,4 @@ https://www.hackingwithswift.com/100/swift/
 |[Milestone 4](16%20-%20Milestone%2010-12) - Image Captions |![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone_1.png)   ![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone_2.png)|
 |[Project 13](17%20-%20Instafilter) - InstaFilter |![Imgur](17%20-%20Instafilter/Screenshots/InstaFilter1.png)   ![Imgur](17%20-%20Instafilter/Screenshots/InstaFilter2.png)|
 |[Project 14](18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/Penguin-1.png)</br>![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/Penguin-2.png)|
-|[Project 15](19%20-%20Animations) - Animations |![Imgur](19%20-%20Animations/Screenshots/Animation.gif)|
+|[Project 15](19%20-%20Animation) - Animations |![Imgur](19%20-%20Animation/Screenshots/Animation.gif)|

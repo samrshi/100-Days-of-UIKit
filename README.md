@@ -24,6 +24,6 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 11](14%20-%20Pachinko) - Pachinko |![Imgur](14%20-%20Pachinko/Screenshots/Pachinko.png)|
 |[Project 12](15%20-%20UserDefaults) - UserDefaults |![Imgur](15%20-%20UserDefaults/Screenshots/Names.png)|
 |[Milestone 4](16%20-%20Milestone%2010-12) - Image Captions |![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone_1.png)   ![Imgur](16%20-%20Milestone%2010-12/Screenshots/Milestone_2.png)|
-|[Project 13](17%20-%20Instafilter) - InstaFilter |![Imgur](17%20-%20Instafilter/Screenshots/Instafilter1.png)   ![Imgur](17%20-%20Instafilter/Screenshots/Instafilter2.png)|
+|[Project 13](17%20-%20Instafilter) - InstaFilter |![Imgur](17%20-%20Instafilter/Screenshots/Instafilter_1.png)   ![Imgur](17%20-%20Instafilter/Screenshots/Instafilter_2.png)|
 |[Project 14](18%20-%20Whack%20a%20Penguin) - Whack a Penguin |![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/Penguin-1.png)</br>![Imgur](18%20-%20Whack%20a%20Penguin/Screenshots/Penguin-2.png)|
 |[Project 15](19%20-%20Animation) - Animations |![Imgur](19%20-%20Animation/Screenshots/Animation.gif)|

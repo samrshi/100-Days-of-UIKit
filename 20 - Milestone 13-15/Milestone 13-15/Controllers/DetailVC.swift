@@ -14,20 +14,33 @@ class DetailVC: UIViewController {
   let sections: [Section] = [.flag, .general, .languages, .currencies]
   let tableView = UITableView()
   
-  private var country: Country!
-  let formatter = NumberFormatter()
+  private var country: CountryVM!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = country.name
-    navigationController?.navigationBar.prefersLargeTitles = false
+    title = country.country.name
+    navigationItem.largeTitleDisplayMode = .never
 
     configureTableView()
-    formatter.numberStyle = .decimal
+    
+    let shareButton = UIBarButtonItem(
+      barButtonSystemItem: .action,
+      target: self,
+      action: #selector(shareTapped))
+      
+    navigationItem.rightBarButtonItem = shareButton
+  }
+  
+  @objc func shareTapped() {
+    let vc = UIActivityViewController(
+      activityItems: [country.overview()],
+      applicationActivities: [])
+    vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+    present(vc, animated: true)
   }
   
   func set(with country: Country) {
-    self.country = country
+    self.country = CountryVM(country: country)
   }
 
   func configureTableView() {
@@ -69,33 +82,29 @@ extension DetailVC: UITableViewDelegate, UITableViewDataSource {
       return cell
     default:
       let id = DetailTextCell.reuseID
-      let cell = tableView.dequeueReusableCell(withIdentifier: id) as! DetailTextCell
+      let cell = tableView.dequeueReusableCell(
+        withIdentifier: id) as! DetailTextCell
       
       switch sections[indexPath.section] {
       case .general:
         switch indexPath.row {
         case 0:
-          cell.set(with: "Name: \(country.name)")
+          cell.set(with: country.name())
         case 1:
-          cell.set(with: "Denomym: \(country.demonym)")
+          cell.set(with: country.demonym())
         case 2:
-          cell.set(with: "Capital: \(country.capital)")
+          cell.set(with: country.capital())
         case 3:
-          cell.set(with: "Population: \(formatter.string(for: country.population)!)")
+          cell.set(with: country.population())
         default:
-          cell.set(with: "Area: \(formatter.string(for: country.area)!) km²")
+          cell.set(with: country.area())
         }
         
       case .languages:
-        let language = country.languages[indexPath.row]
-        cell.set(with: "\(language.name) (\(language.nativeName))")
+        cell.set(with: country.langauge(index: indexPath.row))
         
       case .currencies:
-        let currency = country.currencies[indexPath.row]
-        let name = currency.name ?? "Unknown Name"
-        let code = currency.code ?? "Unknown Code"
-        let symbol = currency.symbol ?? "Unknown symbol"
-        cell.set(with: "\(name) (\(code), \(symbol))")
+        cell.set(with: country.currency(index: indexPath.row))
         
       default:
         break

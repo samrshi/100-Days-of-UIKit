@@ -33,7 +33,7 @@ class DetailFlagCell: UITableViewCell {
       flagImage.centerXAnchor.constraint(equalTo: centerXAnchor),
       flagImage.centerYAnchor.constraint(equalTo: centerYAnchor),
       flagImage.widthAnchor.constraint(equalTo: widthAnchor),
-      heightAnchor.constraint(equalToConstant: 150)
+      heightAnchor.constraint(greaterThanOrEqualToConstant: 150)
     ])
   }
   

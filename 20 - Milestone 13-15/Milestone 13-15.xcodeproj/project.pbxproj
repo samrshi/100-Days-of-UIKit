@@ -14,13 +14,13 @@
 		BD60767B26350DAF003CDFA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60767926350DAF003CDFA1 /* LaunchScreen.storyboard */; };
 		BD60768D26352050003CDFA1 /* UIView+pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60768C26352050003CDFA1 /* UIView+pin.swift */; };
 		BD6076952635216B003CDFA1 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076942635216B003CDFA1 /* Country.swift */; };
-		BD60769B263522BE003CDFA1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60769A263522BE003CDFA1 /* Currency.swift */; };
 		BD60769E263522CA003CDFA1 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60769D263522CA003CDFA1 /* Language.swift */; };
 		BD6076A226352371003CDFA1 /* CountryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076A126352371003CDFA1 /* CountryStore.swift */; };
 		BD6076A526352574003CDFA1 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076A426352574003CDFA1 /* CountryCell.swift */; };
 		BD6076A926352FB5003CDFA1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076A826352FB5003CDFA1 /* DetailVC.swift */; };
 		BD6076AC2635307B003CDFA1 /* DetailFlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076AB2635307B003CDFA1 /* DetailFlagCell.swift */; };
 		BD6076AF263531C7003CDFA1 /* DetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6076AE263531C7003CDFA1 /* DetailTextCell.swift */; };
+		BDF940B226364CA900230AC2 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF940B126364CA900230AC2 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +33,13 @@
 		BD60767C26350DAF003CDFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD60768C26352050003CDFA1 /* UIView+pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+pin.swift"; sourceTree = "<group>"; };
 		BD6076942635216B003CDFA1 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		BD60769A263522BE003CDFA1 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = "../../../MIlestone 13-15/MIlestone 13-15/Model/Currency.swift"; sourceTree = "<group>"; };
 		BD60769D263522CA003CDFA1 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BD6076A126352371003CDFA1 /* CountryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryStore.swift; path = "Milestone 13-15/Managers/CountryStore.swift"; sourceTree = SOURCE_ROOT; };
 		BD6076A426352574003CDFA1 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryCell.swift; path = "Milestone 13-15/Views/CountryCell.swift"; sourceTree = SOURCE_ROOT; };
 		BD6076A826352FB5003CDFA1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailVC.swift; path = "Milestone 13-15/Controllers/DetailVC.swift"; sourceTree = SOURCE_ROOT; };
 		BD6076AB2635307B003CDFA1 /* DetailFlagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailFlagCell.swift; path = "Milestone 13-15/Views/DetailFlagCell.swift"; sourceTree = SOURCE_ROOT; };
 		BD6076AE263531C7003CDFA1 /* DetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailTextCell.swift; path = "Milestone 13-15/Views/DetailTextCell.swift"; sourceTree = SOURCE_ROOT; };
+		BDF940B126364CA900230AC2 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = "Milestone 13-15/Model/Currency.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6076942635216B003CDFA1 /* Country.swift */,
-				BD60769A263522BE003CDFA1 /* Currency.swift */,
+				BDF940B126364CA900230AC2 /* Currency.swift */,
 				BD60769D263522CA003CDFA1 /* Language.swift */,
 			);
 			path = Model;
@@ -155,6 +155,8 @@
 			dependencies = (
 			);
 			name = "Milestone 13-15";
+			packageProductDependencies = (
+			);
 			productName = "MIlestone 13-15";
 			productReference = BD60766B26350DAC003CDFA1 /* Milestone 13-15.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +184,8 @@
 				Base,
 			);
 			mainGroup = BD60766226350DAC003CDFA1;
+			packageReferences = (
+			);
 			productRefGroup = BD60766C26350DAC003CDFA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,13 +213,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6076A526352574003CDFA1 /* CountryCell.swift in Sources */,
-				BD60769B263522BE003CDFA1 /* Currency.swift in Sources */,
 				BD60767326350DAC003CDFA1 /* CountryListVC.swift in Sources */,
 				BD6076AF263531C7003CDFA1 /* DetailTextCell.swift in Sources */,
 				BD6076AC2635307B003CDFA1 /* DetailFlagCell.swift in Sources */,
 				BD60766F26350DAC003CDFA1 /* AppDelegate.swift in Sources */,
 				BD60769E263522CA003CDFA1 /* Language.swift in Sources */,
 				BD6076A926352FB5003CDFA1 /* DetailVC.swift in Sources */,
+				BDF940B226364CA900230AC2 /* Currency.swift in Sources */,
 				BD60768D26352050003CDFA1 /* UIView+pin.swift in Sources */,
 				BD6076952635216B003CDFA1 /* Country.swift in Sources */,
 				BD6076A226352371003CDFA1 /* CountryStore.swift in Sources */,

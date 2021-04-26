@@ -15,7 +15,7 @@ class CountryListVC: UIViewController, CountryStoreDelegate {
     super.viewDidLoad()
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationItem.largeTitleDisplayMode =  .always
-)
+
     title = "Countries"
     countryStore.delegate = self
     

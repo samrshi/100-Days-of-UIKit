@@ -12,10 +12,21 @@ class Capital: NSObject, MKAnnotation {
   var title: String?
   var coordinate: CLLocationCoordinate2D
   var info: String
+  var url: URL
   
-  init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+  init(
+    title: String,
+    urlName: String? = nil,
+    coordinate: CLLocationCoordinate2D,
+    info: String
+  ) {
     self.title = title
     self.coordinate = coordinate
     self.info = info
+    
+    let urlName = urlName == nil ? title : urlName!
+    let urlString = "https://wikipedia.com/wiki/\(urlName)"
+    
+    url = URL(string: urlString)!
   }
 }

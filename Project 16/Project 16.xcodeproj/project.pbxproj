@@ -14,6 +14,7 @@
 		BDCD14582637C1FC00AB2526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCD14572637C1FC00AB2526 /* Assets.xcassets */; };
 		BDCD145B2637C1FC00AB2526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCD14592637C1FC00AB2526 /* LaunchScreen.storyboard */; };
 		BDCD14632637C58F00AB2526 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCD14622637C58F00AB2526 /* Capital.swift */; };
+		BDCD14652637D82100AB2526 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCD14642637D82100AB2526 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BDCD145A2637C1FC00AB2526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDCD145C2637C1FC00AB2526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDCD14622637C58F00AB2526 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
+		BDCD14642637D82100AB2526 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				BDCD144E2637C1FA00AB2526 /* AppDelegate.swift */,
 				BDCD14502637C1FA00AB2526 /* SceneDelegate.swift */,
 				BDCD14522637C1FA00AB2526 /* ViewController.swift */,
+				BDCD14642637D82100AB2526 /* WebViewController.swift */,
 				BDCD14622637C58F00AB2526 /* Capital.swift */,
 				BDCD14542637C1FA00AB2526 /* Main.storyboard */,
 				BDCD14572637C1FC00AB2526 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				BDCD14532637C1FA00AB2526 /* ViewController.swift in Sources */,
 				BDCD144F2637C1FA00AB2526 /* AppDelegate.swift in Sources */,
+				BDCD14652637D82100AB2526 /* WebViewController.swift in Sources */,
 				BDCD14632637C58F00AB2526 /* Capital.swift in Sources */,
 				BDCD14512637C1FA00AB2526 /* SceneDelegate.swift in Sources */,
 			);

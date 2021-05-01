@@ -29,5 +29,5 @@ https://www.hackingwithswift.com/100/swift/
 |[Project 15](19%20-%20Animation) - Animations |![Imgur](19%20-%20Animation/Screenshots/Animation.gif)|
 |[Milestone 5](20%20-%20Milestone%2013-15) - Countries List |![Imgur](20%20-%20Milestone%2013-15/Screenshots/Milestone1.png)   ![Imgur](20%20-%20Milestone%2013-15/Screenshots/Milestone2.png)|
 |[Project 16](21%20-%20Capital%20Cities) - Capital Cities |![Imgur](21%20-%20Capital%20Cities/Screenshots/Capital1.png)   ![Imgur](21%20-%20Capital%20Cities/Screenshots/Capital2.png)|
-|[Img](22%20-%20Space%20Race) - Space Race |![Imgur](22%20-%20Space%20Race/Screenshots/Space1.png)   ![Imgur](22%20-%20Space%20Race/Screenshots/Space2.png)|
+|[Project 17](22%20-%20Space%20Race) - Space Race |![Imgur](22%20-%20Space%20Race/Screenshots/Space1.png)   ![Imgur](22%20-%20Space%20Race/Screenshots/Space2.png)|
 // images are 5 in. tall
